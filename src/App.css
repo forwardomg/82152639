@@ -1,0 +1,18 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--gap--gap-l);
+  min-height: 100vh;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap--gap-l);
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: var(--gap--gap-s);
+  }
+}

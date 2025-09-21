@@ -1,0 +1,163 @@
+.container {
+  position: relative;
+}
+
+.comment {
+  position: relative;
+  padding: var(--gap--gap-xs) 0;
+  transition: opacity 0.2s ease;
+}
+
+.threadLine {
+  position: absolute;
+  width: 1px;
+  background: var(--color-border-light);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.threadLineVertical {
+  top: 0;
+  height: 24px;
+}
+
+.threadLineHorizontal {
+  top: 24px;
+  height: 1px;
+  width: 16px;
+}
+
+.childrenThreadLine {
+  top: 0;
+  bottom: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.children {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--gap--gap-xxxs);
+  margin-bottom: var(--gap--gap-xxxs);
+  font-size: 0.875rem;
+}
+
+.collapseButton {
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--color--text-secondary);
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 0.875rem;
+  transition:
+    color 0.15s ease,
+    outline 0.15s ease;
+  border-radius: 2px;
+}
+
+.collapseButton:hover {
+  color: var(--color--brand-primary);
+}
+
+.collapseButton:focus {
+  outline: 2px solid var(--color--brand-primary);
+  outline-offset: 2px;
+}
+
+.collapseButton:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.author {
+  font-weight: 500;
+  color: var(--color--text-primary);
+}
+
+.deletedAuthor {
+  color: var(--color--text-disabled);
+  font-style: italic;
+}
+
+.timestamp {
+  color: var(--color--text-secondary);
+  font-size: 0.75rem;
+}
+
+.childCount {
+  color: var(--color--text-secondary);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.text {
+  line-height: 1.5;
+  color: var(--color--text-primary);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin-bottom: var(--gap--gap-xxxs);
+}
+
+.deletedText {
+  color: var(--color--text-disabled);
+  font-style: italic;
+}
+
+.actions {
+  display: flex;
+  gap: var(--gap--gap-xxxs);
+  margin-top: var(--gap--gap-xxxs);
+}
+
+.replyForm,
+.editForm {
+  margin-top: var(--gap--gap-s);
+  margin-bottom: var(--gap--gap-s);
+  animation: slideDown 0.2s ease;
+}
+
+.children {
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .comment {
+    padding-left: 0 !important;
+  }
+
+  .threadLine {
+    display: none;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+}

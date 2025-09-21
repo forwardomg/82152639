@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap--gap-l);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.counter {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.newCommentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.commentsSection {
+  min-height: 100px;
+}
+
+.loading {
+  text-align: center;
+  color: var(--color-text-secondary);
+  padding: var(--gap--gap-l);
+  font-style: italic;
+}

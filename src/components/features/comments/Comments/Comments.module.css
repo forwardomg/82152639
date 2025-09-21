@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  padding: var(--gap--gap-l);
+  text-align: center;
+  color: var(--color--text-secondary);
+  font-style: italic;
+  background: var(--color--bg-container);
+  border: 1px solid var(--color--border-neutral);
+  border-radius: var(--border-radius--main);
+}
+
+.empty p {
+  margin: 0;
+}

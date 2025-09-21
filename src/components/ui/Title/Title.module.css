@@ -1,0 +1,19 @@
+.h1 {
+  margin: 0;
+  font-size: var(--gap--gap-l);
+  font-weight: 600;
+  color: var(--color--text-primary);
+}
+
+.h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color--text-primary);
+  margin-bottom: var(--gap--gap-s);
+}
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 1.5rem;
+  }
+}

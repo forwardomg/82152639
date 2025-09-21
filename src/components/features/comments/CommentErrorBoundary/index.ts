@@ -1,0 +1,1 @@
+export { CommentErrorBoundary } from './CommentErrorBoundary';

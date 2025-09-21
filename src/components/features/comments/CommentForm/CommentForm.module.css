@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap--gap-s);
+  padding: var(--gap--gap-s);
+  background: var(--color--bg-surface);
+  border: 1px solid var(--color--border-neutral);
+  border-radius: var(--border-radius--main);
+}
+
+.error {
+  padding: var(--gap--gap-xxxs);
+  background: var(--color-error-background);
+  color: var(--color--critical);
+  border: 1px solid var(--color--critical);
+  border-radius: var(--border-radius--button-main);
+  font-size: 0.875rem;
+}
+
+.actions {
+  display: flex;
+  gap: var(--gap--gap-xxxs);
+}
